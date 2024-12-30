@@ -12,3 +12,5 @@ class ApiResponse {
         // If the status code is less than 400 (e.g., 200 OK), success is true; otherwise, false
     }
 }
+
+export {ApiResponse}
