@@ -1,10 +1,9 @@
 // A utility function to handle asynchronous route handlers and middleware
 const asyncHandler = (requestHandler) => {
-    return (req, res, next) => {
-        // Execute the asynchronous function and handle errors automatically
-        Promise.resolve(requestHandler(req, res, next))
-            .catch((err) => next(err)); // Pass any errors to the next middleware (Express error handler)
-    };
+  return (req, res, next) => {
+    // Execute the asynchronous function and handle errors automatically
+    Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err)); // Pass any errors to the next middleware (Express error handler)
+  };
 };
 
 export { asyncHandler };
@@ -24,4 +23,3 @@ const asyncHandler = (fun) => async (req, res, next) => {
     }
 };
 */
-
